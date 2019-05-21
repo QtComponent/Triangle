@@ -5,6 +5,12 @@ Rectangle {
     width: 640; height: 480
 
     Triangle {
-        isoscelesLength: 20
+        anchors.centerIn: parent
+
+        MouseArea {
+            anchors.fill: parent
+            onClicked: if (parent.width === 80) parent.width = 100;
+                       else parent.width = 80
+        }
     }
 }
