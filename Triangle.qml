@@ -1,19 +1,19 @@
-import QtQuick 2.0
+﻿import QtQuick 2.0
 
-Rectangle {
-//Item {
+Item {
     id: root
-    implicitWidth: 80
+    property alias color: triangle.color
+    implicitWidth: 100
     implicitHeight: implicitWidth
 
     width: implicitWidth
     height: width
 
-    color: "lightblue"
     clip: true
     rotation: -45
 
     Rectangle {
+        id: triangle
         anchors.verticalCenter: parent.verticalCenter
         anchors.verticalCenterOffset: parent.height/2
         anchors.horizontalCenter: parent.horizontalCenter
